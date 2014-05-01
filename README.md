@@ -9,3 +9,5 @@ developers to leverage the same productive high-level language across a variety 
 products.
 
 This cookbook gives some useful recipies when using JSONiq for querying data. Another useful resource is the [JSONiq ebook](http://www.28.io/jsoniq-the-sql-of-nosql).
+
+You can contribute to this cookbook, [pull requests are welcomed](https://github.com/28msec/jsoniq-cookbook/pulls).
