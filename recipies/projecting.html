@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="../manifest.appcache">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Selecting a Subset of Keys (Projecting) | JSONiq Cookbook</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="28msec">
+        <meta name="description" content="JSONiq is a query and processing language specifically designed for the popular JSON data
+model. The main ideas behind JSONiq are based on lessons learned in more than 30 years of
+relational query systems and more than 15 years of experience with designing and implementing
+query languages for semi-structured data. As a result, JSONiq is an expressive and highly
+optimizable language to query and update any kind of JSONiq store or resource. It enables
+developers to leverage the same productive high-level language across a variety of NoSQL
+products.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../recipies/filtering.html" />
+        
+        
+        <link rel="prev" href="../recipies/replacing_key_values.html" />
+        
+
+        <meta property="og:title" content="Selecting a Subset of Keys (Projecting) | JSONiq Cookbook">
+        <meta property="og:site_name" content="JSONiq Cookbook">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/28msec">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+
+
+        
+    <div class="book" data-github="28msec/jsoniq-cookbook" data-level="4" data-basepath=".." data-revision="1398950079463">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="https://github.com/28msec/jsoniq-cookbook" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+	<div class="dropdown-caret">
+  <span class="caret-outer"></span>
+  <span class="caret-inner"></span>
+</div>
+
+	<div class="btn-group btn-block">
+		<button id="reduce-font-size" class="btn btn-default">A</button>
+		<button id="enlarge-font-size" class="btn btn-default">A</button>
+	</div>
+
+	<ul class="list-group font-family-list">
+		<li class="list-group-item" data-font="0">Serif</li>
+		<li class="list-group-item" data-font="1">Sans</li>
+	</ul>
+
+	<div class="btn-group btn-group-xs btn-block color-theme-list">
+	  <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+	</div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    
+    <a href="https://github.com/28msec/jsoniq-cookbook/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/28msec/jsoniq-cookbook/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="../" >JSONiq Cookbook</a>
+    </h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li>
+            <a href="https://github.com/28msec" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/28msec/jsoniq-cookbook/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/28msec/jsoniq-cookbook/edit/master/recipies/projecting.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="recipies/iterating_over_an_array.html">
+                
+                <a href="../recipies/iterating_over_an_array.html">
+                    <i class="fa fa-check"></i> <b>1.</b> Iterating Over an Array
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="2" data-path="recipies/add_key_values.html">
+                
+                <a href="../recipies/add_key_values.html">
+                    <i class="fa fa-check"></i> <b>2.</b> Adding a Key-Value Pair to an Object
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="3" data-path="recipies/replacing_key_values.html">
+                
+                <a href="../recipies/replacing_key_values.html">
+                    <i class="fa fa-check"></i> <b>3.</b> Replacing a Value in a Key-Value Pair of an Object
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="4" data-path="recipies/projecting.html">
+                
+                <a href="../recipies/projecting.html">
+                    <i class="fa fa-check"></i> <b>4.</b> Selecting a Subset of Keys (Projecting)
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="5" data-path="recipies/filtering.html">
+                
+                <a href="../recipies/filtering.html">
+                    <i class="fa fa-check"></i> <b>5.</b> Selecting Objects Based on (Filtering)
+                </a>
+                
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 80%;min-width: 60%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../recipies/iterating_over_an_array.html" title="Iterating Over an Array" class="chapter done new-chapter" data-progress="1" style="left: 20%;"></a>
+    
+        <a href="../recipies/add_key_values.html" title="Adding a Key-Value Pair to an Object" class="chapter done new-chapter" data-progress="2" style="left: 40%;"></a>
+    
+        <a href="../recipies/replacing_key_values.html" title="Replacing a Value in a Key-Value Pair of an Object" class="chapter done new-chapter" data-progress="3" style="left: 60%;"></a>
+    
+        <a href="../recipies/projecting.html" title="Selecting a Subset of Keys (Projecting)" class="chapter done new-chapter" data-progress="4" style="left: 80%;"></a>
+    
+        <a href="../recipies/filtering.html" title="Selecting Objects Based on (Filtering)" class="chapter  new-chapter" data-progress="5" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_5">
+                    
+                        <p>To select a subset of key-value pairs from an object (perhaps with many key-value pairs), we can use the built-in <code>project()</code> function:</p>
+<pre><code class="lang-jsoniq">let $crew := {
+  &quot;Captain&quot; : &quot;Kirk&quot;,
+  &quot;First Officer&quot; : &quot;Spock&quot;,
+  &quot;Engineer&quot; : &quot;Scott&quot;,
+  &quot;Doctor&quot; : &quot;McCoy&quot;,
+  &quot;Communications Officer&quot; : &quot;Uhura&quot;
+}
+return project( $crew, ( &quot;Captain&quot;, &quot;First Officer&quot; ) )
+</code></pre>
+<pre><code class="lang-json">{
+  "<span class="hljs-attribute">Captain</span>" : <span class="hljs-value"><span class="hljs-string">"Kirk"</span></span>,
+  "<span class="hljs-attribute">First Officer</span>" : <span class="hljs-value"><span class="hljs-string">"Spock"</span>
+</span>}
+</code></pre>
+<p>The <code>project()</code> function takes a sqequence of objects to select from and a sequence of keys to select from every object.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../recipies/replacing_key_values.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../recipies/filtering.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+    </body>
+</html>
