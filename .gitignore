@@ -1,4 +1,6 @@
 _Store
 *.swp
+*.swo
 _book
 node_modules
+.grunt
