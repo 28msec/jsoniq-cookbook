@@ -46,7 +46,7 @@ products.">
 
 
         
-    <div class="book" data-github="28msec/jsoniq-cookbook" data-level="1.5" data-basepath=".." data-revision="1398953525669">
+    <div class="book" data-github="28msec/jsoniq-cookbook" data-level="1.5" data-basepath=".." data-revision="1398955085527">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -223,10 +223,8 @@ return $books[ contains( $$.author, &quot;Shubin&quot; ) ]
 </code></pre>
 <p>The use of <code>[ ]</code> and the expression inside is the predicate expression that means in this case: the subset of books where, for each book denoted by <code>$$</code>, the author contains Shubin. The <code>$$</code> is known as the context item (each item in the sequence). The use of <code>[ ]</code> and <code>$$</code> is a short-hand way of writing:</p>
 <pre><code class="lang-jsoniq">for $book in $books
-return 
-  if ( contains( $book.author, &quot;Shubin&quot; ) )
-  then $book
-  else ()
+where contains( $book.author, &quot;Shubin&quot; )
+return $book
 </code></pre>
 <p>Note that in XQuery, the <code>.</code> (dot) refers to the context item; in JSONiq, however, the <code>.</code> is used for object key selection, so <code>$$</code> is used for the context item instead.</p>
 
