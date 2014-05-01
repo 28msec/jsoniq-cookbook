@@ -1,3 +1,5 @@
+#Iterating Over an Array
+
 To iterate over the elements in an array, you might do something like:
 ```jsoniq
 let $a := [ 1, 2, 3 ]

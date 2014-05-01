@@ -1,3 +1,5 @@
+#Selecting a Subset of Keys
+
 To select a subset of key-value pairs from an object (perhaps with many key-value pairs), we can use the built-in ``project()`` function:
 
 ```jsoniq

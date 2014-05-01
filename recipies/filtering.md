@@ -1,3 +1,5 @@
+#Selecting Objects Based on Criteria (Filtering)
+
 To select a sequence of objects that satisfy some criteria, we can use a `predicate expression` to filter the sequence:
 
 ```jsoniq

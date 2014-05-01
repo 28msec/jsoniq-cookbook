@@ -1,3 +1,5 @@
+#Adding a Key-Value Pair to an Object
+
 To add a new key-value pair to an object (or more generally, to merge two objects), use the Merging Object Constructor `{| |}`. For example:
 ```jsoniq
 let $x := { "x" : 1 }
