@@ -27,10 +27,8 @@ The use of ``[ ]`` and the expression inside is the predicate expression that me
 
 ```jsoniq
 for $book in $books
-return 
-  if ( contains( $book.author, "Shubin" ) )
-  then $book
-  else ()
+where contains( $book.author, "Shubin" )
+return $book
 ```
 
 Note that in XQuery, the ``.`` (dot) refers to the context item; in JSONiq, however, the ``.`` is used for object key selection, so ``$$`` is used for the context item instead.
