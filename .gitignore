@@ -1,3 +1,4 @@
 _Store
 *.swp
 _book
+node_modules
