@@ -48,7 +48,7 @@ products.">
 
 
         
-    <div class="book" data-github="28msec/jsoniq-cookbook" data-level="2" data-basepath=".." data-revision="1398950079463">
+    <div class="book" data-github="28msec/jsoniq-cookbook" data-level="2" data-basepath=".." data-revision="1398952545786">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -161,7 +161,7 @@ products.">
             <li  data-level="5" data-path="recipies/filtering.html">
                 
                 <a href="../recipies/filtering.html">
-                    <i class="fa fa-check"></i> <b>5.</b> Selecting Objects Based on (Filtering)
+                    <i class="fa fa-check"></i> <b>5.</b> Selecting Objects Based on Criteria (Filtering)
                 </a>
                 
                 
@@ -189,7 +189,7 @@ products.">
     
         <a href="../recipies/projecting.html" title="Selecting a Subset of Keys (Projecting)" class="chapter  new-chapter" data-progress="4" style="left: 80%;"></a>
     
-        <a href="../recipies/filtering.html" title="Selecting Objects Based on (Filtering)" class="chapter  new-chapter" data-progress="5" style="left: 100%;"></a>
+        <a href="../recipies/filtering.html" title="Selecting Objects Based on Criteria (Filtering)" class="chapter  new-chapter" data-progress="5" style="left: 100%;"></a>
     
     </div>
 </div>
@@ -198,7 +198,8 @@ products.">
                 
                     <section class="normal" id="section-gitbook_2">
                     
-                        <p>To add a new key-value pair to an object (or more generally, to merge two objects), use the Merging Object Constructor <code>{| |}</code>. For example:</p>
+                        <h1 id="adding-a-key-value-pair-to-an-object">Adding a Key-Value Pair to an Object</h1>
+<p>To add a new key-value pair to an object (or more generally, to merge two objects), use the Merging Object Constructor <code>{| |}</code>. For example:</p>
 <pre><code class="lang-jsoniq">let $x := { &quot;x&quot; : 1 }
 let $y := { &quot;y&quot; : 2 }
 return {| $x, $y |}

@@ -1,0 +1,29 @@
+{
+  "name": "jsoniq-cookbook",
+  "version": "0.0.0",
+  "description": "JSONiq Cookbook",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/28msec/jsoniq-cookbook.git"
+  },
+  "keywords": [
+    "jsoniq",
+    "nosql"
+  ],
+  "author": "28msec",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/28msec/jsoniq-cookbook/issues"
+  },
+  "homepage": "https://github.com/28msec/jsoniq-cookbook",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-gitbook": "~0.3.2",
+    "load-grunt-tasks": "~0.4.0",
+    "grunt-gh-pages": "~0.9.1"
+  }
+}

@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Selecting Objects Based on (Filtering) | JSONiq Cookbook</title>
+        <title>Selecting Objects Based on Criteria (Filtering) | JSONiq Cookbook</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
@@ -23,7 +23,7 @@ products.">
         <link rel="prev" href="../recipies/projecting.html" />
         
 
-        <meta property="og:title" content="Selecting Objects Based on (Filtering) | JSONiq Cookbook">
+        <meta property="og:title" content="Selecting Objects Based on Criteria (Filtering) | JSONiq Cookbook">
         <meta property="og:site_name" content="JSONiq Cookbook">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
@@ -46,7 +46,7 @@ products.">
 
 
         
-    <div class="book" data-github="28msec/jsoniq-cookbook" data-level="5" data-basepath=".." data-revision="1398950079463">
+    <div class="book" data-github="28msec/jsoniq-cookbook" data-level="5" data-basepath=".." data-revision="1398952545786">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -159,7 +159,7 @@ products.">
             <li  data-level="5" data-path="recipies/filtering.html">
                 
                 <a href="../recipies/filtering.html">
-                    <i class="fa fa-check"></i> <b>5.</b> Selecting Objects Based on (Filtering)
+                    <i class="fa fa-check"></i> <b>5.</b> Selecting Objects Based on Criteria (Filtering)
                 </a>
                 
                 
@@ -187,7 +187,7 @@ products.">
     
         <a href="../recipies/projecting.html" title="Selecting a Subset of Keys (Projecting)" class="chapter done new-chapter" data-progress="4" style="left: 80%;"></a>
     
-        <a href="../recipies/filtering.html" title="Selecting Objects Based on (Filtering)" class="chapter done new-chapter" data-progress="5" style="left: 100%;"></a>
+        <a href="../recipies/filtering.html" title="Selecting Objects Based on Criteria (Filtering)" class="chapter done new-chapter" data-progress="5" style="left: 100%;"></a>
     
     </div>
 </div>
@@ -196,7 +196,8 @@ products.">
                 
                     <section class="normal" id="section-gitbook_3">
                     
-                        <p>To select a sequence of objects that satisfy some criteria, we can use a <code>predicate expression</code> to filter the sequence:</p>
+                        <h1 id="selecting-objects-based-on-criteria-filtering-">Selecting Objects Based on Criteria (Filtering)</h1>
+<p>To select a sequence of objects that satisfy some criteria, we can use a <code>predicate expression</code> to filter the sequence:</p>
 <pre><code class="lang-jsoniq">let $books := (
   {
     &quot;title&quot; : &quot;A Brief History of Time&quot;,
