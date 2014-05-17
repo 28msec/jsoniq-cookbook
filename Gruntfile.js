@@ -24,8 +24,14 @@ module.exports = function (grunt) {
             title: 'JSONiq Cookbook',
             github: '28msec/jsoniq-cookbook'
           }
+        },
+        xqlint: {
+            options: {
+                src: 'queries'
+            },
+            dist: {}
         }
     });
 
-    grunt.registerTask('default', ['gitbook', 'gh-pages']);
+    grunt.registerTask('default', ['xqlint', 'gitbook', 'gh-pages']);
 };
