@@ -22,7 +22,7 @@
   "homepage": "https://github.com/28msec/jsoniq-cookbook",
   "devDependencies": {
     "grunt": "~0.4.4",
-    "grunt-gitbook": "~0.3.2",
+    "grunt-gitbook": "~0.4.3",
     "load-grunt-tasks": "~0.4.0",
     "grunt-gh-pages": "~0.9.1",
     "grunt-xqlint": "~0.1.0"
