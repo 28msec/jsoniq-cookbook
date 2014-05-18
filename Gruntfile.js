@@ -32,6 +32,6 @@ module.exports = function (grunt) {
             dist: {}
         }
     });
-
+    grunt.registerTask('test', ['xqlint', 'gitbook']);
     grunt.registerTask('default', ['xqlint', 'gitbook', 'gh-pages']);
 };
