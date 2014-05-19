@@ -1,4 +1,4 @@
-# JSONiq Cookbook
+# JSONiq Cookbook [![Build Status](https://travis-ci.org/28msec/jsoniq-cookbook.svg?branch=master)](https://travis-ci.org/28msec/jsoniq-cookbook)
 
 JSONiq is a query and processing language specifically designed for the popular JSON data
 model. The main ideas behind JSONiq are based on lessons learned in more than 30 years of
