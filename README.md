@@ -8,6 +8,6 @@ optimizable language to query and update any kind of JSONiq store or resource. I
 developers to leverage the same productive high-level language across a variety of NoSQL
 products.
 
-This cookbook gives some useful recipies when using JSONiq for querying data. Another useful resource is the [JSONiq ebook](http://www.28.io/jsoniq-the-sql-of-nosql).
+This cookbook gives some useful recipes when using JSONiq for querying data. Another useful resource is the [JSONiq ebook](http://www.28.io/jsoniq-the-sql-of-nosql).
 
 You can contribute to this cookbook, [pull requests are welcomed](https://github.com/28msec/jsoniq-cookbook/pulls).
